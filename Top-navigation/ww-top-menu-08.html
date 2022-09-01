@@ -1,0 +1,177 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,200;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Top-menu-08</title>
+    <style>
+      * {
+        font-family: "Poppins";
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .ww-gallery.ww-top-menu-08 nav {
+        height: 70px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px 10px 20px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      }
+      .ww-gallery.ww-top-menu-08 nav ul {
+        display: flex;
+        list-style: none;
+      }
+      .ww-gallery.ww-top-menu-08 nav ul li {
+        margin: 0 20px;
+      }
+      .ww-gallery.ww-top-menu-08 nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: all 0.5s ease;
+        padding: 8px 2px;
+      }
+      .ww-gallery.ww-top-menu-08 nav ul li a:hover {
+        color: #ff9f1a;
+      }
+      .ww-gallery.ww-top-menu-08 .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 22px;
+        color: black;
+        font-weight: 500;
+      }
+      .ww-gallery.ww-top-menu-08 nav img {
+        height: 40px;
+      }
+      .ww-gallery.ww-top-menu-08 nav .icons div,
+      .ww-gallery.ww-top-menu-08 .icons a {
+        height: 3rem;
+        width: 3rem;
+        font-size: 1.1rem;
+        line-height: 3rem;
+        background: black;
+        color: white;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-right: 0.7rem;
+        text-decoration: none;
+        transition: 0.5s;
+      }
+
+      .ww-gallery.ww-top-menu-08 nav .icons div:hover,
+      .ww-gallery.ww-top-menu-08 .icons a:hover {
+        background: #ff9f1a;
+        color: #fff;
+      }
+      .ww-gallery.ww-top-menu-08 nav .bar {
+        position: relative;
+        margin: auto;
+        display: none;
+      }
+      .ww-gallery.ww-top-menu-08 nav .bar span {
+        position: absolute;
+        color: black;
+        font-size: 20px;
+      }
+      .ww-gallery.ww-top-menu-08 input[type="checkbox"] {
+        -webkit-appearance: none;
+        display: none;
+      }
+      @media (max-width: 990px) {
+        .ww-gallery.ww-top-menu-08 nav ul {
+          position: fixed;
+          top: 70px;
+          left: -100%;
+          background-color: black;
+          height: 55vh;
+          width: 50%;
+          display: block;
+          text-align: center;
+          transition: all 0.5s ease;
+        }
+        .ww-gallery.ww-top-menu-08 .logo {
+          display: flex;
+          font-size: 18px;
+          margin-left: 50px;
+        }
+        .ww-gallery.ww-top-menu-08 nav img {
+          height: 35px;
+        }
+        .ww-gallery.ww-top-menu-08 nav .icons div,
+        .ww-gallery.ww-top-menu-08 .icons a {
+          height: 2rem;
+          width: 2rem;
+          font-size: 0.8rem;
+          line-height: 2rem;
+          background: black;
+          color: white;
+          text-align: center;
+          border-radius: 50%;
+          cursor: pointer;
+          margin-right: 0.7rem;
+          text-decoration: none;
+        }
+
+        .ww-gallery.ww-top-menu-08 nav ul li {
+          margin: 40px 0;
+        }
+        .ww-gallery.ww-top-menu-08 nav ul li a {
+          color: white;
+        }
+        .ww-gallery.ww-top-menu-08 nav .bar {
+          display: block;
+          position: absolute;
+          top: 25px;
+          left: 30px;
+          cursor: pointer;
+        }
+        #check:checked ~ nav .bar #bars:before {
+          content: "";
+        }
+        #check:checked ~ nav ul {
+          left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ww-gallery ww-top-menu-08">
+      <input type="checkbox" id="check" />
+      <nav>
+        <label for="check" class="bar">
+          <span class="fa fa-bars" id="bars"></span>
+        </label>
+        <a href="#" class="logo"><img src="./logo-flora.jpg" alt="" />FLORA</a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Packages</a></li>
+          <li><a href="#">Tours</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="icons">
+          <div id="menu-bar" class="fas fa-bars"></div>
+          <div id="theme-toggler" class="fas fa-moon"></div>
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>

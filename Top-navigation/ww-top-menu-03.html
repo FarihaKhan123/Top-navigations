@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Top-menu-03</title>
+    <style>
+           * {
+        font-family: "Poppins";
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .ww-gallery.ww-top-menu-03 nav {
+        height: 70px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 40px 10px 20px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      }
+      .ww-gallery.ww-top-menu-03 nav ul {
+        display: flex;
+        list-style: none;
+      }
+      .ww-gallery.ww-top-menu-03 nav ul li {
+        margin: 0 20px;
+      }
+      .ww-gallery.ww-top-menu-03 nav ul li a {
+        color: #333;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 10px 15px;
+        transition: 0.7s;
+        
+      }
+      .ww-gallery.ww-top-menu-03 nav ul li a:hover { color: black; border-bottom: 1px solid rgb(6, 33, 92);}
+      .ww-gallery.ww-top-menu-03 .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 22px;
+        color: rgb(6, 33, 92);
+        font-weight: 500;
+      }
+      .ww-gallery.ww-top-menu-03 nav img {
+        height: 40px;
+      }
+      .ww-gallery.ww-top-menu-03 .section a:hover{color: grey;}
+
+      .ww-gallery.ww-top-menu-03 .btn{
+        padding: 10px 15px;
+        border: 0;
+        border-radius: 10px;
+        font-size: 15px;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+      }
+      .ww-gallery.ww-top-menu-03 .btn:hover{background-color: rgb(6, 33, 92); }
+      .ww-gallery.ww-top-menu-03.btn:hover{
+        opacity: 0.6;
+      }
+      .ww-gallery.ww-top-menu-03 nav .bar {
+        position: relative;
+        margin: auto;
+        display: none;
+      }
+      .ww-gallery.ww-top-menu-03 nav .bar span {
+        position: absolute;
+        color: rgb(6, 33, 92);
+        font-size: 20px;
+      }
+      .ww-gallery.ww-top-menu-03 input[type="checkbox"] {
+        -webkit-appearance: none;
+        display: none;
+      }
+
+      @media (max-width: 940px) {
+        .ww-gallery.ww-top-menu-03 nav ul {
+          position: fixed;
+          top: 70px;
+          left: -100%;
+          background-color: rgb(6, 33, 92);
+          border: 0;
+          border-radius: 0px 0px 50px ;
+          height: 55vh;
+          width: 50%;
+          display: block;
+          text-align: center;
+          transition: all 0.5s ease;
+        }
+      .ww-gallery.ww-top-menu-03 .logo {
+        font-size: 15px;
+        margin-left: 10px;
+        
+      }
+      .ww-gallery.ww-top-menu-03 nav img {
+        height: 30px;
+      }
+      .ww-gallery.ww-top-menu-03 .btn{
+        padding: 5px 10px;
+        border: 0;
+        border-radius: 10px;
+        font-size: 13px;
+        background-color: #333;
+        color: white;
+      }
+      .ww-gallery.ww-top-menu-03 nav .bar {
+          display: block;
+          position: absolute;
+          top: 25px;
+          right: 30px;
+          cursor: pointer;
+        }
+        #check:checked ~ nav .bar #bars:before {
+          content: "";
+        }
+        #check:checked ~ nav ul{
+          left: 0;
+        } 
+        .ww-gallery.ww-top-menu-03 nav ul li {
+          margin: 30px 0;
+        }
+        .ww-gallery.ww-top-menu-03 nav ul li a{
+          color: white;
+        }
+        .ww-gallery.ww-top-menu-03 nav ul li a:hover{
+          border: 1px solid white;
+          color: white;
+        }
+  
+      }
+    </style>
+</head>
+<body>
+    <div class="ww-gallery ww-top-menu-03">
+      <input type="checkbox" id="check" />
+        <nav>
+            <a href="#" class="logo"><img src="./logo-internext.png" alt="" />INTERNEXT</a>
+            <ul>
+              <li><a href="#">Choose Pocket</a></li>
+              <li><a href="#">Program</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Help & Center</a></li>
+            </ul>
+            <button class="btn">Get Started</button>
+
+            <label for="check" class="bar">
+              <span class="fa fa-bars" id="bars"></span>
+            </label>
+          </nav>
+    </div>
+</body>
+</html>

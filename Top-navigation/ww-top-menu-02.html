@@ -1,0 +1,204 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,200;1,300&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Top-menu-02</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins";
+      }
+      .ww-gallery.ww-top-menu-02 nav {
+        display: flex;
+        width: 100%;
+        background: black;
+        position: relative;
+        justify-content: space-between;
+        text-align: center;
+        padding: 15px 30px;
+      }
+      .ww-gallery.ww-top-menu-02 nav .icon {
+        font-size: 35px;
+        font-weight: 800;
+        color: #fff;
+        cursor: pointer;
+      }
+      .ww-gallery.ww-top-menu-02 nav ol {
+        display: flex;
+        list-style-type: none;
+        margin: auto 0;
+      }
+      .ww-gallery.ww-top-menu-02 nav ol li {
+        margin: 0 2px;
+      }
+      .ww-gallery.ww-top-menu-02 nav ol li a {
+        color: #fff;
+        font-size: 15px;
+        text-decoration: none;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        padding: 5px 10px;
+        transition: 0.5s;
+      }
+      .ww-gallery.ww-top-menu-02 nav ol li:hover a {
+        background-color: rgb(234, 217, 217);
+        color: #333;
+        border: 0;
+        border-radius: 5px;
+      }
+      .ww-gallery.ww-top-menu-02 nav .search-box {
+        display: flex;
+        margin: auto 0;
+        height: 35px;
+        line-height: 35px;
+      }
+      .ww-gallery.ww-top-menu-02 nav .search-box input {
+        border: none;
+        outline: none;
+        background: #fff;
+        height: 100%;
+        padding: 0 10px;
+        font-size: 15px;
+        width: 300px;
+      }
+      .ww-gallery.ww-top-menu-02 nav .search-box span {
+        color: rgb(225, 137, 137);
+        font-size: 20px;
+        background-color: #fff;
+        height: 100%;
+        padding: 8px;
+        position: relative;
+        cursor: pointer;
+        z-index: 1;
+        transition: 0.7s;
+      }
+      .ww-gallery.ww-top-menu-02 nav .search-box span:hover {
+        color: black;
+      }
+      .ww-gallery.ww-top-menu-02 nav .bar {
+        position: relative;
+        margin: auto;
+        display: none;
+      }
+      .ww-gallery.ww-top-menu-02 nav .bar span {
+        position: absolute;
+        color: #fff;
+        font-size: 35px;
+      }
+      .ww-gallery.ww-top-menu-02 input[type="checkbox"] {
+        -webkit-appearance: none;
+        display: none;
+      }
+      @media screen and (max-width: 1250px) {
+        .ww-gallery.ww-top-menu-02 nav {
+          display: block;
+          padding: 0;
+        }
+        .ww-gallery.ww-top-menu-02 nav .icon {
+          display: inline-block;
+          padding: 15px 30px;
+        }
+        .ww-gallery.ww-top-menu-02 nav .search-box {
+          width: 100%;
+          display: inline-block;
+          justify-content: center;
+          margin-bottom: 15px;
+        }
+        .ww-gallery.ww-top-menu-02 nav .search-box input {
+          width: 70%;
+        }
+        .ww-gallery.ww-top-menu-02 nav ol {
+          display: flex;
+          flex-direction: column;
+          background: #fff;
+          height: 0;
+          visibility: hidden;
+          transition: 0.3s;
+        }
+        .ww-gallery.ww-top-menu-02 nav ol li {
+          text-align: center;
+          transition: 0.3s 0.1s all;
+          opacity: 0;
+        }
+        .ww-gallery.ww-top-menu-02 nav ol li a {
+          color: #333;
+          font-size: 25px;
+          padding: 25px;
+          display: block;
+        }
+        .ww-gallery.ww-top-menu-02 nav ol li:nth-child(1) {
+          transform: translateX(-150px);
+        }
+        .ww-gallery.ww-top-menu-02 nav ol li:nth-child(2) {
+          transform: translateX(-200px);
+        }
+        .ww-gallery.ww-top-menu-02 nav ol li:nth-child(3) {
+          transform: translateX(-250px);
+        }
+        .ww-gallery.ww-top-menu-02 nav ol li:nth-child(4) {
+          transform: translateX(-300px);
+        }
+        .ww-gallery.ww-top-menu-02 nav ol li:nth-child(5) {
+          transform: translateX(-350px);
+        }
+        .ww-gallery.ww-top-menu-02 nav .bar {
+          display: block;
+          position: absolute;
+          top: 20px;
+          right: 80px;
+          cursor: pointer;
+        }
+        .ww-gallery.ww-top-menu-02 nav .bar #times {
+          display: none;
+        }
+        #check:checked ~ nav .bar #times {
+          display: block;
+        }
+        #check:checked ~ nav .bar #bars {
+          display: none;
+        }
+        #check:checked ~ nav ol li {
+          visibility: visible;
+          height: 465px;
+        }
+        #check:checked ~ nav ol li:nth-child(1),
+        #check:checked ~ nav ol li:nth-child(2),
+        #check:checked ~ nav ol li:nth-child(3),
+        #check:checked ~ nav ol li:nth-child(4),
+        #check:checked ~ nav ol li:nth-child(5) {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ww-gallery ww-top-menu-02">
+      <input type="checkbox" id="check" />
+      <nav>
+        <div class="icon">F<b style="color: rgb(225, 137, 137)">D</b>K</div>
+        <div class="search-box">
+          <input type="search" placeholder="Search here" />
+          <span class="fa fa-search"></span>
+        </div>
+        <ol>
+          <li><a href="#">home </a></li>
+          <li><a href="#">contact </a></li>
+          <li><a href="#">services </a></li>
+          <li><a href="#">about </a></li>
+          <li><a href="#" style="color: rgb(222, 91, 91) ;">login here </a></li>
+        </ol>
+        <label for="check" class="bar">
+          <span class="fa fa-bars" id="bars"></span>
+          <span class="fa fa-times" id="times"></span>
+        </label>
+      </nav>
+    </div>
+  </body>
+</html>

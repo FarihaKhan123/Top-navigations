@@ -1,0 +1,180 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,200;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Top-menu-06</title>
+    <style>
+      * {
+        font-family: "Poppins";
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .ww-gallery.ww-top-menu-06 nav {
+        height: 70px;
+        background-color: #222222;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px 10px 20px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+      }
+      .ww-gallery.ww-top-menu-06 nav ul {
+        display: flex;
+        list-style: none;
+      }
+      .ww-gallery.ww-top-menu-06 nav ul li {
+        margin: 0 20px;
+      }
+      .ww-gallery.ww-top-menu-06 nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: all 0.5s ease;
+        padding: 4px 0px;
+      }
+      .ww-gallery.ww-top-menu-06 nav ul li a:hover {
+        color: #ff9f1a;
+      }
+      .ww-gallery.ww-top-menu-06 .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 20px;
+        color: white;
+        font-weight: 500;
+      }
+      .ww-gallery.ww-top-menu-06 .logo img{
+        height: 35px;
+      }
+      .ww-gallery.ww-top-menu-06 nav .search-icon {
+        height: 40px;
+        width: 240px;
+        display: flex;
+        background: #f2f2f2;
+        border-radius: 5px;
+      }
+      .ww-gallery.ww-top-menu-06 nav .search-icon input {
+        height: 100%;
+        width: 200px;
+        border: none;
+        outline: none;
+        padding: 0 10px;
+        color: #000;
+        font-size: 16px;
+        border-radius: 5px 0 0 5px;
+      }
+      .ww-gallery.ww-top-menu-06 nav .search-icon .icon {
+        height: 100%;
+        width: 40px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid #cccccc;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+      }
+      .ww-gallery.ww-top-menu-06 nav .search-icon .icon:hover {
+        background: #e6e6e6;
+      }
+      .ww-gallery.ww-top-menu-06 nav .search-icon .icon span {
+        color: #222222;
+        font-size: 18px;
+        margin-top: 10px;
+      }
+      .ww-gallery.ww-top-menu-06 nav .bar {
+        position: relative;
+        margin: auto;
+        display: none;
+      }
+      .ww-gallery.ww-top-menu-06 nav .bar span {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+      }
+      .ww-gallery.ww-top-menu-06 input[type="checkbox"] {
+        -webkit-appearance: none;
+        display: none;
+      }
+      @media (max-width: 990px) {
+        .ww-gallery.ww-top-menu-06 nav ul {
+          position: fixed;
+          top: 70px;
+          left: -100%;
+          background-color: #eaaa51;
+          height: 55vh;
+          width: 50%;
+          display: block;
+          text-align: center;
+          transition: all 0.5s ease;
+        }
+        .ww-gallery.ww-top-menu-06 .logo {
+          margin-left: 50px;
+          display: flex;
+          font-size: 15px;
+        }
+        .ww-gallery.ww-top-menu-06 nav img {
+          height: 25px;
+        }
+        .ww-gallery.ww-top-menu-06 nav ul li {
+          margin: 40px 0;
+        }
+        .ww-gallery.ww-top-menu-06 nav ul li a {
+          color: white;
+        }
+        
+        .ww-gallery.ww-top-menu-06 .menu-btn i {
+          display: block;
+          color: white;
+        }
+        .ww-gallery.ww-top-menu-06 nav .bar {
+          display: block;
+          position: absolute;
+          top: 25px;
+          left: 30px;
+          cursor: pointer;
+        }
+        #check:checked ~ nav .bar #bars:before {
+          content: "";
+        }
+        #check:checked ~ nav ul{
+          left: 0;
+        } 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ww-gallery ww-top-menu-06">
+      <input type="checkbox" id="check" />
+      <nav>
+        <label for="check" class="bar">
+          <span class="fa fa-bars" id="bars"></span>
+        </label>
+        <a href="#" class="logo"><img src="./logo-macdonalds.png" alt="" />MACDONALDS</a>
+        <ul>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">OUR MENU</a></li>
+          <li><a href="#">OPEN DOOR</a></li>
+          <li><a href="#">LOCATE US</a></li>
+        </ul>
+        <li class="search-icon">
+          <input type="search" placeholder="Search" />
+          <label class="icon">
+            <span class="fas fa-search"></span>
+          </label>
+        </li>
+      </nav>
+    </div>
+  </body>
+</html>

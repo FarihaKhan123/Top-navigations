@@ -1,0 +1,165 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,200;1,300&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Top-menu-05</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins";
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+      }
+      .ww-gallery.ww-top-menu-05 nav {
+        height: 70px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10px 10px 10px;
+      }
+      .ww-gallery.ww-top-menu-05 nav ul {
+        display: flex;
+        list-style: none;
+        margin-right: 50px;
+      }
+      .ww-gallery.ww-top-menu-05 nav ul li {
+        margin: 0 20px;
+      }
+
+      .ww-gallery.ww-top-menu-05 nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: all 0.5s ease;
+        padding: 8px 10px;
+      }
+      .ww-gallery.ww-top-menu-05 nav ul li a:hover,
+      .ww-gallery.ww-top-menu-05 nav ul li a.active {
+        color: rgb(224, 99, 99);
+        border-radius: 5px;
+      }
+
+      .ww-gallery.ww-top-menu-05 .logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 25px;
+        color: rgb(224, 99, 99);
+        font-weight: 500;
+      }
+      .ww-gallery.ww-top-menu-05 .logo span {
+        color: rgb(242, 243, 245);
+        margin-left: 3px;
+      }
+      .ww-gallery.ww-top-menu-05 nav img {
+        height: 60px;
+        margin-right: -3px;
+      }
+      .ww-gallery.ww-top-menu-05 .btn {
+        padding: 8px 15px;
+        background-color: rgb(224, 99, 99);
+        color: white;
+        border: 0;
+        border-radius: 5px;
+        font-size: 17px;
+        margin-right: 30px;
+        transition: 0.5s;
+        cursor: pointer;
+      }
+      .ww-gallery.ww-top-menu-05 .btn:hover {
+        opacity: 0.8;
+      }
+      .ww-gallery.ww-top-menu-05 nav .bar {
+        position: relative;
+        margin: auto;
+        display: none;
+      }
+      .ww-gallery.ww-top-menu-05 nav .bar span {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+      }
+      .ww-gallery.ww-top-menu-05 input[type="checkbox"] {
+        -webkit-appearance: none;
+        display: none;
+      }
+      @media (max-width: 940px) {
+        .ww-gallery.ww-top-menu-05 nav ul {
+          position: fixed;
+          top: 70px;
+          left: -100%;
+          background-color: black;
+          height: 55vh;
+          width: 100%;
+          display: block;
+          text-align: center;
+          transition: all 0.5s ease;
+        }
+        .ww-gallery.ww-top-menu-05 .logo {
+          margin-left: 50px;
+          font-size: 20px;
+        }
+        .ww-gallery.ww-top-menu-05 .btn {
+          padding: 6px 11px;
+          color: white;
+          font-size: 15px;
+          margin-right: 0px;
+          transition: 0.5s;
+        }
+        .ww-gallery.ww-top-menu-05 nav ul li {
+          margin: 40px 0;
+        }
+        .ww-gallery.ww-top-menu-05 nav ul li a {
+          color: white;
+        }
+        .ww-gallery.ww-top-menu-05 nav .bar {
+          display: block;
+          position: absolute;
+          top: 25px;
+          left: 30px;
+          cursor: pointer;
+        }
+        #check:checked ~ nav .bar #bars:before {
+          content: "";
+        }
+        #check:checked ~ nav ul{
+          left: 0;
+        } 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="ww-gallery ww-top-menu-05">
+        <input type="checkbox" id="check" />
+        <nav>
+          <label for="check" class="bar">
+            <span class="fa fa-bars" id="bars"></span>
+          </label>
+          <a href="#" class="logo"
+            ><img src="./logo-wildhunt.png" alt="" />WILD <span>HUNT</span></a
+          >
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+          <div class="btn">Register</div>
+        </nav>
+      </div>
+    </div>
+  </body>
+</html>
